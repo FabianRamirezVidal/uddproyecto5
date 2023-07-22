@@ -30,12 +30,12 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink to="/category" className="nav-link">
-                  Category
+                  Categoria
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/register" className="nav-link">
-                  Register
+                  Registro
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -45,7 +45,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink to="/login" className="nav-link" href="#">
-                  Cart (0)
+                  Carro (0)
                 </NavLink>
               </li>
             </ul>
