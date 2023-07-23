@@ -1,12 +1,19 @@
 import React from "react";
-import Layout from "../components/Layout/Layout";
+import { Link } from "react-router-dom";
+import Layout from "./../components/Layout/Layout";
 
-const PageNotFound = () => {
+const Pagenotfound = () => {
   return (
-    <Layout>
-      <h1>Page Not Found</h1>
+    <Layout title={"Volver - Pagina no encontrada"}>
+      <div className="pnf">
+        <h1 className="pnf-title">404</h1>
+        <h2 className="pnf-heading">Oops ! Pagina no encontrada</h2>
+        <Link to="/" className="pnf-btn">
+          Volver
+        </Link>
+      </div>
     </Layout>
   );
 };
 
-export default PageNotFound;
+export default Pagenotfound;
