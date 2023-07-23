@@ -4,13 +4,13 @@ import { useSearch } from "../context/search";
 const Search = () => {
   const [values, setValues] = useSearch();
   return (
-    <Layout title={"Search results"}>
+    <Layout title={"Resultados de busqueda"}>
       <div className="container">
         <div className="text-center">
-          <h1>Search Resuts</h1>
+          <h1>Resultados de busqueda</h1>
           <h6>
             {values?.results.length < 1
-              ? "No Products Found"
+              ? "No se encontraron productos"
               : `Found ${values?.results.length}`}
           </h6>
           <div className="d-flex flex-wrap mt-4">
@@ -27,8 +27,10 @@ const Search = () => {
                     {p.description.substring(0, 30)}...
                   </p>
                   <p className="card-text"> $ {p.price}</p>
-                  <button class="btn btn-primary ms-1">More Details</button>
-                  <button class="btn btn-secondary ms-1">ADD TO CART</button>
+                  <button class="btn btn-primary ms-1">Más detalles</button>
+                  <button class="btn btn-secondary ms-1">
+                    Agregar al carro
+                  </button>
                 </div>
               </div>
             ))}

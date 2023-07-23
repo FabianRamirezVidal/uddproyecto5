@@ -1,32 +1,32 @@
 export const Prices = [
   {
     _id: 0,
-    name: "$0 to 19",
-    array: [0, 19],
+    name: "$0 a $999",
+    array: [0, 999],
   },
   {
     _id: 1,
-    name: "$20 to 39",
-    array: [20, 39],
+    name: "$1.000 a $4.999",
+    array: [1000, 4999],
   },
   {
     _id: 2,
-    name: "$40 to 59",
-    array: [40, 59],
+    name: "$5.000 a $9.999",
+    array: [5000, 9999],
   },
   {
     _id: 3,
-    name: "$60 to 79",
-    array: [60, 79],
+    name: "$10.000 a $14.999",
+    array: [10000, 14999],
   },
   {
     _id: 4,
-    name: "$80 to 99",
-    array: [80, 99],
+    name: "$15.000 a $19.999",
+    array: [15000, 19999],
   },
   {
     _id: 4,
-    name: "$100 or more",
-    array: [100, 9999],
+    name: "$20.000 o más",
+    array: [20000, 9999999],
   },
 ];

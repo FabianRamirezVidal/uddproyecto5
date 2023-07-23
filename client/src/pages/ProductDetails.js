@@ -50,26 +50,26 @@ const ProductDetails = () => {
           />
         </div>
         <div className="col-md-6 product-details-info">
-          <h1 className="text-center">Product Details</h1>
+          <h1 className="text-center">Detalles de productos</h1>
           <hr />
-          <h6>Name : {product.name}</h6>
-          <h6>Description : {product.description}</h6>
+          <h6>Nombre : {product.name}</h6>
+          <h6>Descripción : {product.description}</h6>
           <h6>
-            Price :
+            Precio :
             {product?.price?.toLocaleString("en-US", {
               style: "currency",
               currency: "USD",
             })}
           </h6>
-          <h6>Category : {product?.category?.name}</h6>
-          <button class="btn btn-secondary ms-1">ADD TO CART</button>
+          <h6>Categoría : {product?.category?.name}</h6>
+          <button class="btn btn-secondary ms-1">Agregar al carro</button>
         </div>
       </div>
       <hr />
       <div className="row container similar-products">
-        <h4>Similar Products ➡️</h4>
+        <h4>Productos Similares ➡️</h4>
         {relatedProducts.length < 1 && (
-          <p className="text-center">No Similar Products found</p>
+          <p className="text-center">No se encontraron productos similares</p>
         )}
         <div className="d-flex flex-wrap">
           {relatedProducts?.map((p) => (
@@ -97,7 +97,7 @@ const ProductDetails = () => {
                     className="btn btn-info ms-1"
                     onClick={() => navigate(`/product/${p.slug}`)}
                   >
-                    More Details
+                    Más detalles
                   </button>
                   {/* <button
                   className="btn btn-dark ms-1"

@@ -107,7 +107,7 @@ const HomePage = () => {
     }
   };
   return (
-    <Layout title={"ALl Products - Best offers "}>
+    <Layout title={"Ecommerce Proyecto 5 UDD"}>
       {/* banner image */}
       <img
         src="/images/banner.png"
@@ -118,7 +118,7 @@ const HomePage = () => {
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
-          <h4 className="text-center">Filter By Category</h4>
+          <h4 className="text-center">Filtrar por categoría</h4>
           <div className="d-flex flex-column">
             {categories?.map((c) => (
               <Checkbox
@@ -130,7 +130,7 @@ const HomePage = () => {
             ))}
           </div>
           {/* price filter */}
-          <h4 className="text-center mt-4">Filter By Price</h4>
+          <h4 className="text-center mt-4">Filtrar por precio</h4>
           <div className="d-flex flex-column">
             <Radio.Group onChange={(e) => setRadio(e.target.value)}>
               {Prices?.map((p) => (
@@ -145,12 +145,12 @@ const HomePage = () => {
               className="btn btn-danger"
               onClick={() => window.location.reload()}
             >
-              RESET FILTERS
+              Borrar Filtros
             </button>
           </div>
         </div>
         <div className="col-md-9 ">
-          <h1 className="text-center">All Products</h1>
+          <h1 className="text-center">Todos los Productos</h1>
           <div className="d-flex flex-wrap">
             {products?.map((p) => (
               <div className="card m-2" key={p._id}>
@@ -177,7 +177,7 @@ const HomePage = () => {
                       className="btn btn-info ms-1"
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
-                      More Details
+                      Mas detalles
                     </button>
                     <button
                       className="btn btn-dark ms-1"
@@ -190,7 +190,7 @@ const HomePage = () => {
                         toast.success("Item Added to cart");
                       }}
                     >
-                      ADD TO CART
+                      AGREGAR AL CARRO
                     </button>
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const HomePage = () => {
                 ) : (
                   <>
                     {" "}
-                    Loadmore <AiOutlineReload />
+                    Cargar más <AiOutlineReload />
                   </>
                 )}
               </button>

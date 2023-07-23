@@ -86,14 +86,14 @@ const CreateCategory = () => {
     }
   };
   return (
-    <Layout title={"Dashboard - Create Category"}>
+    <Layout title={"Dashboard - Crear categoría"}>
       <div className="container-fluid m-3 p-3 dashboard">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />
           </div>
           <div className="col-md-9">
-            <h1>Manage Category</h1>
+            <h1>Administrar categoría</h1>
             <div className="p-3 w-50">
               <CategoryForm
                 handleSubmit={handleSubmit}
@@ -105,8 +105,8 @@ const CreateCategory = () => {
               <table className="table">
                 <thead>
                   <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Acciones</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -123,7 +123,7 @@ const CreateCategory = () => {
                               setSelected(c);
                             }}
                           >
-                            Edit
+                            Editar
                           </button>
                           <button
                             className="btn btn-danger ms-2"
@@ -131,7 +131,7 @@ const CreateCategory = () => {
                               handleDelete(c._id);
                             }}
                           >
-                            Delete
+                            Borrar
                           </button>
                         </td>
                       </tr>

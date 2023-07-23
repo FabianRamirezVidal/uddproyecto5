@@ -24,9 +24,9 @@ const CartPage = () => {
       cart?.map((item) => {
         total = total + item.price;
       });
-      return total.toLocaleString("en-US", {
+      return total.toLocaleString("es-CL", {
         style: "currency",
-        currency: "USD",
+        currency: "CLP",
       });
     } catch (error) {
       console.log(error);
@@ -71,7 +71,7 @@ const CartPage = () => {
       localStorage.removeItem("cart");
       setCart([]);
       navigate("/dashboard/user/orders");
-      toast.success("Payment Completed Successfully ");
+      toast.success("Pago completado exitosamente ");
     } catch (error) {
       console.log(error);
       setLoading(false);
@@ -84,14 +84,14 @@ const CartPage = () => {
           <div className="col-md-12">
             <h1 className="text-center bg-light p-2 mb-1">
               {!auth?.user
-                ? "Hello Guest"
-                : `Hello  ${auth?.token && auth?.user?.name}`}
+                ? "Hola Invitado"
+                : `Hola  ${auth?.token && auth?.user?.name}`}
               <p className="text-center">
                 {cart?.length
-                  ? `You Have ${cart.length} items in your cart ${
-                      auth?.token ? "" : "please login to checkout !"
+                  ? `Tienes ${cart.length} artículos en tu carro ${
+                      auth?.token ? "" : "Por favor loggea para pagar !"
                     }`
-                  : " Your Cart Is Empty"}
+                  : " Tu carro está vacío"}
               </p>
             </h1>
           </div>
@@ -113,34 +113,34 @@ const CartPage = () => {
                   <div className="col-md-4">
                     <p>{p.name}</p>
                     <p>{p.description.substring(0, 30)}</p>
-                    <p>Price : {p.price}</p>
+                    <p>Precio : {p.price}</p>
                   </div>
                   <div className="col-md-4 cart-remove-btn">
                     <button
                       className="btn btn-danger"
                       onClick={() => removeCartItem(p._id)}
                     >
-                      Remove
+                      Quitar
                     </button>
                   </div>
                 </div>
               ))}
             </div>
             <div className="col-md-5 cart-summary ">
-              <h2>Cart Summary</h2>
-              <p>Total | Checkout | Payment</p>
+              <h2>Resumen Carro</h2>
+              <p>Total | Pagar | Medio de pago</p>
               <hr />
               <h4>Total : {totalPrice()} </h4>
               {auth?.user?.address ? (
                 <>
                   <div className="mb-3">
-                    <h4>Current Address</h4>
+                    <h4>Dirección actual</h4>
                     <h5>{auth?.user?.address}</h5>
                     <button
                       className="btn btn-outline-warning"
                       onClick={() => navigate("/dashboard/user/profile")}
                     >
-                      Update Address
+                      Actualizar dirección
                     </button>
                   </div>
                 </>
@@ -151,7 +151,7 @@ const CartPage = () => {
                       className="btn btn-outline-warning"
                       onClick={() => navigate("/dashboard/user/profile")}
                     >
-                      Update Address
+                      Actualizar dirección
                     </button>
                   ) : (
                     <button
@@ -162,7 +162,7 @@ const CartPage = () => {
                         })
                       }
                     >
-                      Plase Login to checkout
+                      Por favor loggea para pagar
                     </button>
                   )}
                 </div>

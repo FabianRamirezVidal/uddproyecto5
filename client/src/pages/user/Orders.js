@@ -21,14 +21,14 @@ const Orders = () => {
     if (auth?.token) getOrders();
   }, [auth?.token]);
   return (
-    <Layout title={"Your Orders"}>
+    <Layout title={"Tus ordenes"}>
       <div className="container-flui p-3 m-3 dashboard">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
           </div>
           <div className="col-md-9">
-            <h1 className="text-center">All Orders</h1>
+            <h1 className="text-center">Todas las compras</h1>
             {orders?.map((o, i) => {
               return (
                 <div className="border shadow">
@@ -37,10 +37,10 @@ const Orders = () => {
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Buyer</th>
-                        <th scope="col"> date</th>
-                        <th scope="col">Payment</th>
-                        <th scope="col">Quantity</th>
+                        <th scope="col">Comprador</th>
+                        <th scope="col"> Fecha</th>
+                        <th scope="col">Pago</th>
+                        <th scope="col">Cantidad</th>
                       </tr>
                     </thead>
                     <tbody>

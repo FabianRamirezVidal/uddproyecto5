@@ -73,14 +73,14 @@ export const getProductController = async (req, res) => {
     res.status(200).send({
       success: true,
       counTotal: products.length,
-      message: "ALlProducts ",
+      message: "Todos los Productos ",
       products,
     });
   } catch (error) {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "Erorr in getting products",
+      message: "Error al mostrar los productos",
       error: error.message,
     });
   }
@@ -179,7 +179,7 @@ export const updateProductController = async (req, res) => {
     await products.save();
     res.status(201).send({
       success: true,
-      message: "Product Updated Successfully",
+      message: "Producto actualizado exitosamente",
       products,
     });
   } catch (error) {
@@ -187,7 +187,7 @@ export const updateProductController = async (req, res) => {
     res.status(500).send({
       success: false,
       error,
-      message: "Error in Updte product",
+      message: "Error al actualizar producto",
     });
   }
 };
@@ -208,7 +208,7 @@ export const productFiltersController = async (req, res) => {
     console.log(error);
     res.status(400).send({
       success: false,
-      message: "Error WHile Filtering Products",
+      message: "Error al filtrar productos",
       error,
     });
   }

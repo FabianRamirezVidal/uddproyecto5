@@ -50,7 +50,7 @@ const Profile = () => {
     }
   };
   return (
-    <Layout title={"Your Profile"}>
+    <Layout title={"Tu perfil"}>
       <div className="container-fluid m-3 p-3 dashboard">
         <div className="row">
           <div className="col-md-3">
@@ -59,7 +59,7 @@ const Profile = () => {
           <div className="col-md-8">
             <div className="form-container" style={{ marginTop: "-40px" }}>
               <form onSubmit={handleSubmit}>
-                <h4 className="title">USER PROFILE</h4>
+                <h4 className="title">PERFIL DE USUARIO</h4>
                 <div className="mb-3">
                   <input
                     type="text"
@@ -67,7 +67,7 @@ const Profile = () => {
                     onChange={(e) => setName(e.target.value)}
                     className="form-control"
                     id="exampleInputEmail1"
-                    placeholder="Enter Your Name"
+                    placeholder="Ingresa tu nombre"
                     autoFocus
                   />
                 </div>
@@ -78,7 +78,7 @@ const Profile = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     className="form-control"
                     id="exampleInputEmail1"
-                    placeholder="Enter Your Email "
+                    placeholder="Ingresa tu email "
                     disabled
                   />
                 </div>
@@ -89,7 +89,7 @@ const Profile = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     className="form-control"
                     id="exampleInputPassword1"
-                    placeholder="Enter Your Password"
+                    placeholder="Ingresa tu contraseña"
                   />
                 </div>
                 <div className="mb-3">
@@ -99,7 +99,7 @@ const Profile = () => {
                     onChange={(e) => setPhone(e.target.value)}
                     className="form-control"
                     id="exampleInputEmail1"
-                    placeholder="Enter Your Phone"
+                    placeholder="Ingresa tu teléfono"
                   />
                 </div>
                 <div className="mb-3">
@@ -109,12 +109,12 @@ const Profile = () => {
                     onChange={(e) => setAddress(e.target.value)}
                     className="form-control"
                     id="exampleInputEmail1"
-                    placeholder="Enter Your Address"
+                    placeholder="Ingresa tu dirección"
                   />
                 </div>
 
                 <button type="submit" className="btn btn-primary">
-                  UPDATE
+                  ACTUALIZAR
                 </button>
               </form>
             </div>
