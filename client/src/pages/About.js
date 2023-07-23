@@ -3,7 +3,7 @@ import Layout from "./../components/Layout/Layout";
 
 const About = () => {
   return (
-    <Layout title={"Acerca de"}>
+    <Layout title={"About us - Ecommer app"}>
       <div className="row contactus ">
         <div className="col-md-6 ">
           <img
@@ -13,7 +13,6 @@ const About = () => {
           />
         </div>
         <div className="col-md-4">
-        <h1 className="bg-dark p-2 text-white text-center">Acerca de</h1>
           <p className="text-justify mt-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
             officiis obcaecati esse tempore unde ratione, eveniet mollitia,
